@@ -1,0 +1,49 @@
+<!-- 学习使用一些javascript实例 -->
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Learning Notes of Javascript</title>
+	<style type="text/css">
+		/*h2标注实例序号*/
+		/*h3用于说明一部分实现原理*/
+		h2 {color:orange;}
+		h3 {color:#90b230;}
+	</style>
+</head>
+<body>
+
+	<h2>实例1</h2>
+	<h3>使用document.getElementById(id)查找对应元素并设置按钮事件将其内容更改</h3>
+	<h3>Javascript同样可以修改文字样式</h3>
+	<p id="ph1">
+		点击按钮，Javascript将改变这段文字。
+	</p>
+	<script>
+		function changeContent(){
+			x=document.getElementById("ph1");
+			x.innerHTML="Hello Javascript!";
+			x.style.color="#40b3df";
+			/*这个颜色大概比aqua略深一点(奇怪的描述)*/
+		}
+	</script>
+	<button type="button" onclick="changeContent()">
+		Click Here!
+	</button>
+
+	<h2>实例2</h2>
+	<h3>使用Date()函数获取系统时间</h3>
+	<p id="date">
+		当前系统日期和时间
+	</p>
+	<script>
+		function displayDate(){
+			document.getElementById("date").innerHTML=Date();
+		}
+	</script>
+	<button type="button" onclick="displayDate()">
+		显示系统时间和日期
+	</button>
+
+</body>
+</html>
